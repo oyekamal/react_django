@@ -10,5 +10,7 @@ router.register(r'choice', views.ChoiceViewSet)
 
 urlpatterns = [
     path('', views.index, name='index'),
+
+    path("question_choices/", views.ChoiceViewSet.as_view({"post":"question_choices"}), name="question_choices"),
     path('', include(router.urls)),
 ]
